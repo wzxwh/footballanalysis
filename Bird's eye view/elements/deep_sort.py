@@ -42,6 +42,8 @@ class DEEPSORT():
             bbox_xyxy = outputs[:, :4]
             identities = outputs[:, -1]
             draw_boxes(im0, bbox_xyxy, identities)
+
+        return outputs
     
 
     def xyxy_to_xywh(self, *xyxy):
